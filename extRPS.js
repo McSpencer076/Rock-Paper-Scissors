@@ -30,7 +30,7 @@ function gameRound(computerInput, playerInput){
         ++roundNumber
         ++computerScore
     } else if (computerInput === "steen" && playerInput === "papier" || computerInput === "papier" && playerInput === "schaar" || computerInput === "schaar" && playerInput === "steen"){
-        console.log("Player Wins!" + computerInput + " beats " + playerInput) 
+        console.log("Player Wins! " + computerInput + " beats " + playerInput) 
         ++roundNumber
         ++playerScore
     } else {
@@ -43,4 +43,4 @@ function gameRound(computerInput, playerInput){
     
     for (let i = 0; i < 5; i++) {
     gameRound(computerPlay(), playerPlay());
-    }
+    } 
