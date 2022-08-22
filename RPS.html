@@ -1,97 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Function Scope Example</title>
+  <title>Rock Paper Scissors!</title>
   <style>
-    input {
-      font-size: 2em;
-      margin: 10px 1px 0;
-    }
   </style>
   <meta charset="UTF-8"/>
 </head>
-
 <body>
-
-  <script>
-    // Your JavaScript goes here!
-    const computerSelection = computerPlay();
-    const playerSelection = playerPlay()
-
-    let playerScore = 0;
-    let computerScore = 0;
-    let roundCounter = 1;
-
- //   function game(){
-   //   if (roundCounter > 0 && roundCounter < 6) {
-     //   playRound(playerSelection, computerSelection)
-      //}
-     // else{console.log(computerScore + " " + playerScore)}
-   // }
-
-   function game(){
-    playRound(playerPlay(), computerPlay());
-    playRound(playerPlay(), computerPlay());
-    playRound(playerPlay(), computerPlay());
-    playRound(playerPlay(), computerPlay());
-    playRound(playerPlay(), computerPlay());
-
-    
-}
-    function playRound(playerSelection, computerSelection){
-      if(playerSelection === "")
-      {alert("FOUT!")
-      return}
-      if(playerSelection === computerSelection){
-        console.log("Tie")
-        console.log("Gelijkspel, het staat: " + playerScore + " " + computerScore + " De ronde wordt opnieuw gespeeld")
-            }
-      else if(
-        (playerSelection === "steen" && computerSelection === "schaar")  ||
-        (playerSelection === "schaar" && computerSelection === "papier") ||
-        (playerSelection === "papier" && computerSelection === "steen")
-      ){
-        
-        ++playerScore;
-        console.log("Player wint, het staat: " + playerScore + " " +  computerScore + " Ronde: " + roundCounter)
-        ++roundCounter;
-    }
-      else if(
-        (playerSelection === "steen" && computerSelection === "papier") ||
-        (playerSelection === "schaar" && computerSelection === "steen") ||
-        (playerSelection === "papier" && computerSelection === "schaar")
-      ){
-        ++roundCounter;
-        ++computerScore;
-        console.log("Computer wint, het staat: " + playerScore + " " + computerScore + " Ronde: " + roundCounter)
-      }
-      else{
-        alert("Invoer is helaas niet juist onvtangen, probeer het opnieuw.")
-      }
-    }
-
-    function playerPlay(){
-      let playerAction = prompt("Steen, papier, schaar?")
-      let playerChoice = playerAction.toLowerCase();
-      console.log(playerChoice);
-      return playerChoice;
-    }
-
-    function computerPlay(){
-      let randomNumber = Math.floor(Math.random() *3) +1 ;
-      const computerArray = []
-            computerArray[1] = "steen";
-            computerArray[2] = "papier";
-            computerArray[3] = "schaar";
-      let computerPick = computerArray[randomNumber];
-      console.log(randomNumber)
-      return computerPick;
-    }
-
-    console.log()
-    game();
-
-    
+  <script src="extRPS.js">
 </script>
 </body>
 </html>
