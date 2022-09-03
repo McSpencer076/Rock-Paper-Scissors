@@ -3,7 +3,7 @@ const playerInput = playerPlay();
 
 let playerScore = 0;
 let computerScore = 0;
-let roundNumber = 0;
+let roundNumber = 1;
 
 function computerPlay(){
     let randomNumber = Math.floor(Math.random() *3) +1 ;
